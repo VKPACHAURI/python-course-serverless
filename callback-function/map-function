@@ -1,0 +1,12 @@
+def mymap(func,mylist):
+    result=[]
+    for x in mylist:
+        result.append(func(x))
+    return result
+
+def stringprocess(x):
+    return "{}->{}".format(x,len(x))
+
+
+xyz=mymap(stringprocess,["radhey","krishna","radharani","ram","siatram"])
+print(xyz)
