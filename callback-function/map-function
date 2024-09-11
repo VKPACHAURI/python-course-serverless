@@ -10,3 +10,6 @@ def stringprocess(x):
 
 xyz=mymap(stringprocess,["radhey","krishna","radharani","ram","siatram"])
 print(xyz)
+print(mymap(lambda a:a*a,[1,2,3,4,5,6,7,8]))
+
+print(mymap(lambda a:"EVEN" if a%2==0 else "ODD",[2,3,4,5,6,7,8]))
