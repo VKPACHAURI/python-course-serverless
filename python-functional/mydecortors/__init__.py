@@ -1,1 +1,0 @@
-from mydecortors.dec import resourceHandler

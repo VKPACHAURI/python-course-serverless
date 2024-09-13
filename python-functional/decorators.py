@@ -1,6 +1,6 @@
 
-from mydecortors import resourceHandler
-
+from mydecorators import resourceHandler
+from mydecorators import takeBackup
 
 
 @resourceHandler
@@ -11,7 +11,14 @@ def process(filename):
 @resourceHandler
 def dbactivity(db):
     print('working with db resources',db)
-    print('playing with db data')    
+    print('playing with db data')  
 
-process('file name e.txt')
-dbactivity('mysql database')    
+
+@takeBackup(location="d:\\takeit")
+def dbfun(db):
+    print("performing a db actvity of db",db)
+    print("playing with db data")      
+
+#process('file name e.txt')
+#dbactivity('mysql database')    
+dbfun("oracle")
